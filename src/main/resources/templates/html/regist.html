@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+
+
+    <!--百度jQueryCDN-->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!--百度bootstrapCDN-->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!--自定义CSS-->
+    <script src="/js/regist.js"></script>
+    <style>
+        .login_middle{
+            padding: 30px;
+            background-color: white;
+            margin-top: 10%;
+        }
+        body{
+            background-color:RGB(200,200,169);
+        }
+    </style>
+</head>
+<body>
+
+<!--login-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-xs-12 login_middle">
+            <p class="text-center">注册</p>
+            <div id="alerts"></div>
+            <br><br>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="code">
+                    <form role="form">
+                        <div class="form-group col-md-12 col-xs-12">
+                            <input type="text" class="form-control input_height " id="email"
+                                   placeholder="Email">
+                        </div>
+                        <div class="code" >
+                            <div class="form-group col-md-7 col-xs-7">
+                                <input type="text" class="form-control input_height" id="email_code"
+                                       placeholder="验证码">
+                            </div>
+                            <input type="button" id="get_code" class="middle btn btn-link input_height" value="获取验证码"/>
+                        </div>
+                    </form>
+                    <a href="#" id="check"  data-toggle="tab" type="button" class="btn btn-default btn_height btn-success col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 next"  >验证</a>
+                </div>
+                <div class="tab-pane fade" id="check-code">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="password" class="form-control input_height" id="password"
+                                   placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input_height" id="repassword"
+                                   placeholder="重复密码">
+                        </div>
+                    </form>
+                    <a href="#ok" id="finish"  data-toggle="tab" type="button" class="btn btn-default btn_height btn-success col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2"  >确认</a>
+                </div>
+                <div class="tab-pane fade" id="ok">
+                    <a href="/page/login" id="success" type="button" class="btn btn-default btn_height btn-success col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2" >去登陆</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

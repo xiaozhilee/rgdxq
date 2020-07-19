@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+    <!--百度jQueryCDN-->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!--百度bootstrapCDN-->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--自定义CSS-->
+<style>
+    .login_middle{
+        padding: 30px;
+        background-color: white;
+        margin-top: 10%;
+    }
+    body{
+        background-color:RGB(200,200,169);
+    }
+</style>
+</head>
+<body>
+
+<!--login-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-xs-12 login_middle">
+            <p class="text-center">登录</p>
+            <div id="alerts"></div>
+            <br/><br/>
+            <form class="form-signin" method="post" action="/Login">
+                <p>
+                    <label for="username" class="sr-only">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                </p>
+                <p>
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                </p>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="/page/repassword" class="right text_color">重置密码</a>
+                </div>
+                <button type="submit" id="sgin_in" class="btn btn-default btn_height btn-success col-lg-8 col-lg-offset-2 col-xs-8 col-xs-offset-2" >登录</button><br/><br/>
+            </form>
+                <hr>
+                <p class="text-muted text-center">还没有账号?</p>
+                <a href="/page/regist" class="btn btn-outline-light btn_height col-lg-8 col-lg-offset-2 col-xs-8 col-xs-offset-2 text_color">立即注册!</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
